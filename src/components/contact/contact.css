@@ -1,0 +1,19 @@
+.contact{
+    padding: 3rem 0;
+}
+.contact__info-title{
+    color: var(--primary);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.contact__info-subtitle{
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.contact__info-data{
+    gap: 1rem;
+}
+.contact__info-data-title{
+    font-weight: 700;
+    color: var(--primary);
+}

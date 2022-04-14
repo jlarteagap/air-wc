@@ -1,11 +1,11 @@
 import React from 'react'
-import { Footer } from './components'
+import { Footer, Contact } from './components'
 import { AppProvider } from './context/AppContext'
 function App() {
   return (
     <AppProvider>
       <div className="App">
-        Jola
+        <Contact />
         <Footer />
       </div>
     </AppProvider>

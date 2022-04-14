@@ -3,8 +3,24 @@
     background: var(--secondary);
     padding: 0 0 5rem;
 }
+.footer__logo{
+    width: 70px;
+}
+.footer__about{
+    padding-top: 4rem;
+}
 .footer__social{
     border-bottom: 1px solid;
+}
+.footer__info-content{
+    margin-top: 0;
+}
+.footer__links{
+    
+}
+.footer__links-title{
+    font-weight: 600;
+    color: var(--primary);
 }
 .footer a{
     color: white;

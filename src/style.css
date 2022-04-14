@@ -25,6 +25,9 @@
         background: white;
         border-radius: .4rem;
     }
+    .social__icons:hover .social__icon{
+        color: var(--primary);
+    }
 .primary{
     color:  var(--primary);
     transition: all .4s;
