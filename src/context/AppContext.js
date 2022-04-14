@@ -12,9 +12,9 @@ export function AppProvider({ children }) {
   useEffect(() => {
     const url = `${API_HOST}/empresa/?a=${A}&e=${E}&ub=${UB}`
     fetch(url)
-      .then(res => res.json())
+      .then(response => response.json())
       .then(data => {
-        setEmpresa(data.empresa)
+        setEmpresa(data.records)
       })
   }, [])
 

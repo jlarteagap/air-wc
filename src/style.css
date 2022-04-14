@@ -1,0 +1,35 @@
+:root{
+    --primary: #0093ff;
+    --secondary: #060816
+}
+/* Social icons  */
+.social{
+
+}
+.social__icons {
+    width: 2rem;
+    height: 2rem;
+}
+.social__icon{
+    cursor: pointer;
+    color: white;
+    transition: all .4s ease-out;
+}
+/* .social__icons:hover{
+    border: solid 1px var(--primary);
+} */
+    .social__icon:hover{
+        color: var(--primary);
+    }
+    .social__icons:hover{
+        background: white;
+        border-radius: .4rem;
+    }
+.primary{
+    color:  var(--primary);
+    transition: all .4s;
+}
+.secondary{
+    color: var(--secondary);
+    transition: all .4s;
+}

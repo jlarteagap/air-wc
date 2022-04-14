@@ -1,0 +1,15 @@
+.footer{
+    color: white;
+    background: var(--secondary);
+    padding: 0 0 5rem;
+}
+.footer__social{
+    border-bottom: 1px solid;
+}
+.footer a{
+    color: white;
+    transition: all .3s ease-in-out;
+}
+.footer a:hover{
+    color: var(--primary);
+}
