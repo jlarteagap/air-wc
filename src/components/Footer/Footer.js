@@ -48,12 +48,8 @@ const Footer = () => {
               <div className="footer__links-items">
                 <h3 className="footer__links-title is-size-5 pb-3">Contacto</h3>
                 <ul>
-                  <li>(CB)73498898</li>
-                  <li>(TJ)72968656</li>
-                  <li>(SC)69322083</li>
-                  <li>info@air.com.bo</li>
-                  <li>medinaceli@air.com.bo</li>
-                  <li>paolasanchez@air.com.bo</li>
+                  <li>{empresa.telefono}</li>
+                  <li>{empresa.email}</li>
                 </ul>
               </div>
             </div>
