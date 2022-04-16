@@ -2,6 +2,8 @@ import React from 'react'
 import './contact.css'
 import useData from '../../hooks/useData'
 import { FormContact } from './form/FormContact'
+import pin from '../../assets/pin.png'
+import contact from '../../assets/contact.png'
 
 const Contact = () => {
   const { empresa } = useData()
@@ -15,9 +17,8 @@ const Contact = () => {
               Adquiere nuestros servicios
             </h3>
             <div className="contact__info-data is-flex mt-5">
-              <div className="">
-                ima
-                <img src="" alt="" />
+              <div className="contact__icons">
+                <img src={contact} alt="" className="contact__icons-img" />
               </div>
               <div className="">
                 <h4 className="contact__info-data-title">Contacto</h4>
@@ -28,9 +29,8 @@ const Contact = () => {
               </div>
             </div>
             <div className="contact__info-data is-flex mt-5">
-              <div className="">
-                ima
-                <img src="" alt="" />
+              <div className="contact__icons">
+                <img src={pin} alt="" className="contact__icons-img" />
               </div>
               <div className="">
                 <h4 className="contact__info-data-title">Dirección</h4>

@@ -17,3 +17,9 @@
     font-weight: 700;
     color: var(--primary);
 }
+
+.contact__icons-img{
+    max-width: 80px;
+    height: auto;
+    object-fit: contain;
+}
