@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { getData } from '../../api/Api'
 import './services.css'
 
+import decoracion from '../../assets/arrows.svg'
+
 function Services() {
   const [services, setServices] = useState([])
 
@@ -23,10 +25,11 @@ function Services() {
         <div className="services__content is-flex is-justify-content-center ">
           <div className="services__header is-flex is-flex-direction-column is-align-items-center">
             <h3 className="services__header-title title is-4 m-0">Servicios</h3>
-            <p className="services__header-subtitle is-size-3 has-text-centered has-text-weight-bold mt-2">
+            <p className="services__header-subtitle is-size-3 has-text-centered has-text-weight-bold mt-2 pb-5">
               Agregamos valor a tu empresa a traves de tecnología emergente,
               proporcionando soluciones integrales.
             </p>
+            <img src={decoracion} />
           </div>
         </div>
 

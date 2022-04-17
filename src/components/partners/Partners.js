@@ -1,6 +1,7 @@
 import React from 'react'
 import './partners.css'
 import useData from '../../hooks/useData'
+import decoracion from '../../assets/arrows.svg'
 function Partners() {
   const { empresa } = useData()
   return (
@@ -25,6 +26,7 @@ function Partners() {
               Contamos con más de 11 años de experiencia dentro del ámbito de
               las T.I., brindando soluciones
             </p>
+            <img src={decoracion} />
             <div
               className="mt-5"
               dangerouslySetInnerHTML={{ __html: empresa.descripcion }}

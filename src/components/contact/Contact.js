@@ -4,6 +4,7 @@ import useData from '../../hooks/useData'
 import { FormContact } from './form/FormContact'
 import pin from '../../assets/pin.png'
 import contact from '../../assets/contact.png'
+import decoracion from '../../assets/arrows.svg'
 
 const Contact = () => {
   const { empresa } = useData()
@@ -16,6 +17,7 @@ const Contact = () => {
             <h3 className="contact__info-subtitle is-size-4">
               Adquiere nuestros servicios
             </h3>
+            <img src={decoracion} />
             <div className="contact__info-data is-flex mt-5">
               <div className="contact__icons">
                 <img src={contact} alt="" className="contact__icons-img" />
