@@ -1,0 +1,10 @@
+.partners{
+    padding-bottom: 5rem;
+}
+.partners__header-title, .partners__trayectoria-title, .trayectoria__counter span{
+    color: var(--primary);
+}
+
+.trayectoria__texts{
+    padding-right: 12rem;
+}

@@ -1,0 +1,35 @@
+.services{
+    padding: 5rem 0;
+}
+.services__header{
+    max-width: 800px;
+}
+.services__header-title{
+    color: var(--primary);
+}
+.services__header-subtitle{
+    line-height: 1.25;
+}
+.services__items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 2rem;
+    grid-gap: 1.5rem;
+}
+.services__item{
+    margin-top: 3rem;
+}
+.services__item-content{
+    gap: 1rem;
+}
+.services__item-icon{
+    background: #eff6ff;
+    border-radius: 50%;
+    padding: 1rem;
+    box-sizing: border-box;
+    max-width: 80px;
+    height: 80px;
+}
+.services__item-img{
+
+}

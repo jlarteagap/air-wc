@@ -1,0 +1,15 @@
+.team{
+    padding: 5rem 0;
+    background: var(--secondary);
+    color: white;
+}
+.team__head-title{
+    color: var(--primary);
+}
+.team__body{
+    margin-top: 5rem;
+}
+.team__item{
+    background: var(--primary);
+    color: white;
+}

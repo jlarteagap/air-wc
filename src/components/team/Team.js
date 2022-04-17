@@ -1,7 +1,45 @@
 import React from 'react'
+import './team.css'
 
 function Team() {
-  return <>hola</>
+  return (
+    <div className="team">
+      <div className="container">
+        <div className="team__head is-flex is-flex-direction-column is-align-items-center">
+          <h3 className="team__head-title title is-4 m-0">Nuestro equipo</h3>
+          <p className="team__head-subtitle is-size-3 mt-2 has-text-weight-bold">
+            Siempre atentos para brindarte el mejor servicio
+          </p>
+        </div>
+        <div className="team__body is-flex is-justify-content-space-around">
+          <div className="team__item has-text-centered p-5">
+            <h4 className="team__item-position has-text-weight-bold is-size-5">
+              CEO
+            </h4>
+            <p className="team__item-name">Juan Pablo Martinez</p>
+          </div>
+          <div className="team__item has-text-centered p-5">
+            <h4 className="team__item-position has-text-weight-bold is-size-5">
+              CEO
+            </h4>
+            <p className="team__item-name">Juan Pablo Martinez</p>
+          </div>
+          <div className="team__item has-text-centered p-5">
+            <h4 className="team__item-position has-text-weight-bold is-size-5">
+              CEO
+            </h4>
+            <p className="team__item-name">Juan Pablo Martinez</p>
+          </div>
+          <div className="team__item has-text-centered p-5">
+            <h4 className="team__item-position has-text-weight-bold is-size-5">
+              CEO
+            </h4>
+            <p className="team__item-name">Juan Pablo Martinez</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Team
