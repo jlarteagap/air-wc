@@ -6,13 +6,15 @@ import {
   Testimonials,
   Team,
   Services,
-  Partners
+  Partners,
+  Slide
 } from './components'
 import { AppProvider } from './context/AppContext'
 function App() {
   return (
     <AppProvider>
       <div className="App">
+        <Slide />
         <Services />
         <Partners />
         <Team />
