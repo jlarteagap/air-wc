@@ -1,0 +1,22 @@
+
+
+.menuTooltip{
+    width: 30%;
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    z-index: 999;
+}
+.menuTooltip__body{
+    height: 100%;
+}
+.menuTooltip__icon{
+    background-color: var(--primary);
+    color: white;
+    height: 48px;
+    width: 48px;
+    border-radius: .5rem;
+}
+.menuTooltip__body-titles{
+    color: var(--primary);
+}
