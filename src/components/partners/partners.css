@@ -4,7 +4,11 @@
 .partners__header-title, .partners__trayectoria-title, .trayectoria__counter span{
     color: var(--primary);
 }
-
+.trayectoria__icon img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
 .trayectoria__texts{
     padding-right: 12rem;
 }

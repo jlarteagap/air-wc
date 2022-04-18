@@ -2,6 +2,10 @@ import React from 'react'
 import './partners.css'
 import useData from '../../hooks/useData'
 import decoracion from '../../assets/arrows.svg'
+import rocket from '../../assets/rocket.png'
+import people from '../../assets/people.png'
+import partners from '../../assets/partners.png'
+
 function Partners() {
   const { empresa } = useData()
   return (
@@ -13,7 +17,8 @@ function Partners() {
           </div>
         </div>
         <div className="is-flex is-justify-content-center my-5">
-          Partners icons
+          {' '}
+          <img src={partners} loading="lazy" width="500px" />
         </div>
         <div className="my-4">
           <h4 className="partners__trayectoria-title title is-5 has-text-weight-bold">
@@ -36,7 +41,10 @@ function Partners() {
             </a>
           </div>
           <div className="column is-3">
-            <div className="trayectoria__counter is-size-1 has-text-weight-bold my-4">
+            <div className="trayectoria__icon">
+              <img src={rocket} loading="lazy" />
+            </div>
+            <div className="trayectoria__counter is-size-1 has-text-weight-bold mb-4">
               300<span>+</span>
             </div>
             <p>
@@ -45,7 +53,10 @@ function Partners() {
             </p>
           </div>
           <div className="column is-3">
-            <div className="trayectoria__counter is-size-1 has-text-weight-bold my-4">
+            <div className="trayectoria__icon">
+              <img loading="lazy" src={people} alt="" />
+            </div>
+            <div className="trayectoria__counter is-size-1 has-text-weight-bold mb-4">
               90<span>+</span>
             </div>
             <p>

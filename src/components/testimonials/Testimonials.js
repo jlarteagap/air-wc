@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import { getData } from '../../api/Api'
 import './testimonials.css'
-
+import profile from '../../assets/profile.png'
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([])
   useEffect(() => {
@@ -41,7 +41,9 @@ const Testimonials = () => {
                 className="testimonial__carrousel-item is-flex is-flex-direction-column is-align-items-center"
                 key={testimonial.id_mensaje}
               >
-                <div className="testimonial__carrousel-photo"></div>
+                <div className="testimonial__carrousel-photo">
+                  <img src={profile} loading="lazy" />
+                </div>
                 <p className="testimonial__carrousel-message is-size-2 has-text-centered has-text-weight-bold my-5 py-5">
                   {testimonial.mensaje}
                 </p>

@@ -1,21 +1,24 @@
 import React from 'react'
-import { Splide, SplideSlide } from '@splidejs/react-splide'
+// import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import './client.css'
-
+import clients from '../../assets/clients.png'
 const Clients = () => {
-  const mainOptions = {
-    arrows: false,
-    rewind: true,
-    gap: '1rem',
-    autoplay: true,
-    perMove: 1,
-    type: 'loop'
-  }
+  // const mainOptions = {
+  //   arrows: false,
+  //   rewind: true,
+  //   gap: '1rem',
+  //   autoplay: true,
+  //   perMove: 1,
+  //   type: 'loop'
+  // }
   return (
     <div className="clients">
       <div className="container">
-        <Splide
+        <center>
+          <img src={clients} loading="lazy" width="800px" />
+        </center>
+        {/* <Splide
           aria-label="My Favorite Images"
           options={mainOptions}
           className="clientes__carousel"
@@ -26,7 +29,7 @@ const Clients = () => {
           <SplideSlide>
             <img src="image2.jpg" alt="Image 2" />
           </SplideSlide>
-        </Splide>
+        </Splide> */}
       </div>
     </div>
   )
