@@ -12,4 +12,8 @@
 .team__item{
     background: var(--primary);
     color: white;
+    max-width: 200px;
+}
+.team__item-img{
+    max-width: 150px;
 }

@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './team.css'
+import { getData } from '../../api/Api'
 
 function Team() {
+  const [team, setTeam] = useState([])
+  useEffect(() => {
+    ;(async () => {
+      try {
+        const res = await getData('personal')
+        setTeam(res)
+      } catch (error) {
+        console.log(error)
+      }
+    })()
+  }, [])
+
+  console.log(team)
   return (
     <div className="team">
       <div className="container">
@@ -12,30 +26,24 @@ function Team() {
           </p>
         </div>
         <div className="team__body is-flex is-justify-content-space-around">
-          <div className="team__item has-text-centered p-5">
-            <h4 className="team__item-position has-text-weight-bold is-size-5">
-              CEO
-            </h4>
-            <p className="team__item-name">Juan Pablo Martinez</p>
-          </div>
-          <div className="team__item has-text-centered p-5">
-            <h4 className="team__item-position has-text-weight-bold is-size-5">
-              CEO
-            </h4>
-            <p className="team__item-name">Juan Pablo Martinez</p>
-          </div>
-          <div className="team__item has-text-centered p-5">
-            <h4 className="team__item-position has-text-weight-bold is-size-5">
-              CEO
-            </h4>
-            <p className="team__item-name">Juan Pablo Martinez</p>
-          </div>
-          <div className="team__item has-text-centered p-5">
-            <h4 className="team__item-position has-text-weight-bold is-size-5">
-              CEO
-            </h4>
-            <p className="team__item-name">Juan Pablo Martinez</p>
-          </div>
+          {team.map(personal => {
+            return (
+              <div
+                className="team__item has-text-centered p-5"
+                key={personal.NOMBRE}
+              >
+                <img
+                  src={personal.FOTO}
+                  alt={personal.NOMBRE}
+                  className="team__item-img"
+                />
+                <h4 className="team__item-position has-text-weight-bold is-size-5">
+                  {personal.CARGO}
+                </h4>
+                <p className="team__item-name">{personal.NOMBRE}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>
