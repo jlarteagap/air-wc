@@ -1,4 +1,13 @@
-
+.header__navbar{
+    background: transparent;
+}
+.menu__hidden-icon{
+    cursor: pointer;
+    transition: all .3s;
+}
+.menu__hidden-icon:hover{
+    color: var(--primary);
+}
 
 .menuTooltip{
     width: 30%;
@@ -6,16 +15,20 @@
     right: 0;
     height: 100vh;
     z-index: 999;
+
 }
 .menuTooltip__body{
     height: 100%;
 }
 .menuTooltip__icon{
     background-color: var(--primary);
+    border-radius: .5rem;
     color: white;
+    cursor: pointer;
     height: 48px;
     width: 48px;
-    border-radius: .5rem;
+    position: absolute;
+    top: 1rem;
 }
 .menuTooltip__body-titles{
     color: var(--primary);

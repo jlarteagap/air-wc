@@ -1,13 +1,18 @@
 import React from 'react'
 import useData from '../../hooks/useData'
+
 import { SocialIcons } from '../utils/SocialIcons'
-function MenuTooltip() {
+
+function MenuTooltip({ menu, onClick }) {
   const { empresa } = useData()
   return (
-    <div className="menuTooltip p-5 card">
+    <div className={`menuTooltip p-5 card ${menu ? '' : 'is-hidden'}`}>
       <div className="menuTooltip__body is-flex is-flex-direction-column is-justify-content-space-around">
         <div className="is-flex is-justify-content-end">
-          <div className="menuTooltip__icon is-flex is-justify-content-center is-align-items-center">
+          <div
+            className="menuTooltip__icon is-flex is-justify-content-center is-align-items-center"
+            onClick={onClick}
+          >
             X
           </div>
         </div>
