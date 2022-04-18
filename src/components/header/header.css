@@ -1,6 +1,12 @@
 .header__navbar{
     background: transparent;
 }
+.header__navbar-brand{
+    background-color: var(--secondary);
+}
+.header__navbar-brand img, .header__logo{
+    color: white !important;
+}
 .menu__hidden-icon{
     cursor: pointer;
     transition: all .3s;
