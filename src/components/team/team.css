@@ -15,5 +15,8 @@
     max-width: 200px;
 }
 .team__item-img{
-    max-width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
 }
