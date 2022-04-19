@@ -10,3 +10,14 @@ export async function getData(section) {
     console.log(error)
   }
 }
+
+export async function getSlide(galeria) {
+  try {
+    const url = `${API_HOST}/fotogaleria/?a=${A}&e=${E}&ub=${UB}&c=${galeria}`
+    const res = await fetch(url)
+    const result = await res.json()
+    return result
+  } catch (error) {
+    console.log(error)
+  }
+}
