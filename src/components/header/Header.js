@@ -39,7 +39,7 @@ function Header() {
             />
           </a>
 
-          <a
+          <div
             role="button"
             className="navbar-burger"
             aria-label="menu"
@@ -49,14 +49,18 @@ function Header() {
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
-          </a>
+          </div>
         </div>
 
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
-            <a className="header__navbar-item navbar-item">Home</a>
+            <a className="header__navbar-item navbar-item" href="#">
+              Home
+            </a>
 
-            <a className="header__navbar-item navbar-item">Documentation</a>
+            <a className="header__navbar-item navbar-item" href="#">
+              Documentation
+            </a>
           </div>
 
           <div className="navbar-end is-align-items-center">

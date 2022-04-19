@@ -30,7 +30,7 @@ function Partners() {
               Contamos con más de 11 años de experiencia dentro del ámbito de
               las T.I., brindando soluciones
             </p>
-            <img src={decoracion} />
+            <img src={decoracion} alt="/\/\/\" />
             <div
               className="mt-5"
               dangerouslySetInnerHTML={{ __html: empresa.descripcion }}
