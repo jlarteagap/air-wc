@@ -1,11 +1,21 @@
 .header__navbar{
     background: transparent;
+    border-bottom: 1px solid white ;
+    /* margin-left: 50px; */
+}
+.header__navbar-white{
+    background: white;
 }
 .header__navbar-brand{
     background-color: var(--secondary);
 }
-.header__navbar-brand img, .header__logo{
-    color: white !important;
+.header__navbar-brand-white{
+    background: white;
+}
+.header__logo{
+    width: 200px !important;
+    height: auto !important;
+    max-height: 65px !important;
 }
 .menu__hidden-icon{
     cursor: pointer;
