@@ -54,11 +54,11 @@ function Header() {
 
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
-            <a className="header__navbar-item navbar-item" href="#">
+            <a className="header__navbar-item navbar-item" href="#Home">
               Home
             </a>
 
-            <a className="header__navbar-item navbar-item" href="#">
+            <a className="header__navbar-item navbar-item" href="#Services">
               Documentation
             </a>
           </div>
