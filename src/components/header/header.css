@@ -1,11 +1,24 @@
 .header__navbar{
     background: transparent;
     border-bottom: 1px solid white ;
-    /* margin-left: 50px; */
+}
+.header__navbar .header__navbar-item{
+    color: white;
+    font-weight: 600;
+}
+.header__navbar .header__navbar-item:hover{
+    background: transparent;
+    color: var(--primary);
 }
 .header__navbar-white{
     background: white;
+    border: none;
 }
+.header__navbar-white .header__navbar-item {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
 .header__navbar-brand{
     background-color: var(--secondary);
 }
@@ -19,7 +32,11 @@
 }
 .menu__hidden-icon{
     cursor: pointer;
+    color: white;
     transition: all .3s;
+}
+.menu__hidden-icon-color{
+    color: var(--secondary);
 }
 .menu__hidden-icon:hover{
     color: var(--primary);

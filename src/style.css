@@ -1,6 +1,7 @@
 :root{
     --primary: #0093ff;
-    --secondary: #060816
+    --secondary: #0D0F18;
+    --third: #000033; 
 }
 /* Social icons  */
 .social{
