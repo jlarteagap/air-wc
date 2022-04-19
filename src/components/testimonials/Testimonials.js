@@ -42,7 +42,7 @@ const Testimonials = () => {
                 key={testimonial.id_mensaje}
               >
                 <div className="testimonial__carrousel-photo">
-                  <img src={profile} loading="lazy" />
+                  <img src={profile} loading="lazy" alt={testimonial.nombre} />
                 </div>
                 <p className="testimonial__carrousel-message is-size-2 has-text-centered has-text-weight-bold my-5 py-5">
                   {testimonial.mensaje}

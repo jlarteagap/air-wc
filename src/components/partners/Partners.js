@@ -17,8 +17,7 @@ function Partners() {
           </div>
         </div>
         <div className="is-flex is-justify-content-center my-5">
-          {' '}
-          <img src={partners} loading="lazy" width="500px" />
+          <img src={partners} loading="lazy" width="500px" alt="partner" />
         </div>
         <div className="my-4">
           <h4 className="partners__trayectoria-title title is-5 has-text-weight-bold">
@@ -42,7 +41,7 @@ function Partners() {
           </div>
           <div className="column is-3">
             <div className="trayectoria__icon">
-              <img src={rocket} loading="lazy" />
+              <img src={rocket} loading="lazy" alt="trayectoria" />
             </div>
             <div className="trayectoria__counter is-size-1 has-text-weight-bold mb-4">
               300<span>+</span>
@@ -54,7 +53,7 @@ function Partners() {
           </div>
           <div className="column is-3">
             <div className="trayectoria__icon">
-              <img loading="lazy" src={people} alt="" />
+              <img loading="lazy" src={people} alt="user" />
             </div>
             <div className="trayectoria__counter is-size-1 has-text-weight-bold mb-4">
               90<span>+</span>

@@ -16,7 +16,7 @@ const Clients = () => {
     <div className="clients">
       <div className="container">
         <center>
-          <img src={clients} loading="lazy" width="800px" />
+          <img src={clients} loading="lazy" width="800px" alt="Clientes" />
         </center>
         {/* <Splide
           aria-label="My Favorite Images"

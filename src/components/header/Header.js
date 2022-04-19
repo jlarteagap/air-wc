@@ -32,7 +32,11 @@ function Header() {
           }`}
         >
           <a className="navbar-item" href="https://bulma.io">
-            <img className="header__logo" src={bgMenu ? logo : logoW} />
+            <img
+              className="header__logo"
+              src={bgMenu ? logo : logoW}
+              alt="AIR"
+            />
           </a>
 
           <a

@@ -29,7 +29,7 @@ function Services() {
               Agregamos valor a tu empresa a traves de tecnología emergente,
               proporcionando soluciones integrales.
             </p>
-            <img src={decoracion} />
+            <img src={decoracion} alt="/\/\/\" />
           </div>
         </div>
 

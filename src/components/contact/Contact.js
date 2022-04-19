@@ -17,7 +17,7 @@ const Contact = () => {
             <h3 className="contact__info-subtitle is-size-4">
               Adquiere nuestros servicios
             </h3>
-            <img src={decoracion} />
+            <img src={decoracion} alt="decoracion" />
             <div className="contact__info-data is-flex mt-5">
               <div className="contact__icons">
                 <img src={contact} alt="" className="contact__icons-img" />
