@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import './client.css'
@@ -14,12 +14,17 @@ const Clients = () => {
       try {
         const res = await getSlide('clientes')
         setClients(res.records)
-        updateClients()
       } catch (error) {
         console.log(error)
       }
     })()
   }, [])
+
+  useCallback(() => {
+    if (clients.length > 0) {
+      updateClients()
+    }
+  }, [clients])
 
   const mainOptions = {
     arrows: false,
