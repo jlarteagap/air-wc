@@ -23,7 +23,7 @@ function Header() {
   window.addEventListener('scroll', changeNavbarColor)
 
   return (
-    <div className="header">
+    <div className="header" id="inicio">
       <nav
         className={`header__navbar navbar is-fixed-top ${
           bgMenu && 'header__navbar-white'

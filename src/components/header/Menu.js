@@ -5,7 +5,7 @@ export const Menu = () => {
   const { serviceContext, testimonialContext, clientsContext } = useData()
   return (
     <>
-      <a className="header__navbar-item navbar-item" href="#">
+      <a className="header__navbar-item navbar-item" href="#inicio">
         Home
       </a>
       {serviceContext && (
