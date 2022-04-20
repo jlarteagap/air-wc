@@ -9,7 +9,7 @@ import decoracion from '../../assets/arrows.svg'
 const Contact = () => {
   const { empresa } = useData()
   return (
-    <div className="contact">
+    <div className="contact" id="contacto">
       <div className="container">
         <div className="columns">
           <div className="contact__info column">
@@ -25,8 +25,10 @@ const Contact = () => {
               <div className="">
                 <h4 className="contact__info-data-title">Contacto</h4>
                 <ul>
-                  <li>{empresa.telefono}</li>
-                  <li>{empresa.email}</li>
+                  <li className="has-text-weight-semibold">
+                    {empresa.telefono}
+                  </li>
+                  <li className="has-text-weight-semibold">{empresa.email}</li>
                 </ul>
               </div>
             </div>
@@ -36,7 +38,10 @@ const Contact = () => {
               </div>
               <div className="">
                 <h4 className="contact__info-data-title">Dirección</h4>
-                <div dangerouslySetInnerHTML={{ __html: empresa.domicilio }} />
+                <div
+                  className="has-text-weight-semibold"
+                  dangerouslySetInnerHTML={{ __html: empresa.domicilio }}
+                />
               </div>
             </div>
           </div>

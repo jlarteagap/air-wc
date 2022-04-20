@@ -5,6 +5,7 @@ export const SelectField = ({ label, ...props }) => {
 
   return (
     <div className="form__select select is-expanded">
+      <label className="label">{label}</label>
       <select
         className={`select__expanded ${
           meta.touched && meta.error && 'is-danger'
@@ -41,7 +42,7 @@ export const SelectField = ({ label, ...props }) => {
           Oruro
         </option>
       </select>
-      <label className="label">{label}</label>
+
       <ErrorMessage
         component="div"
         name={field.name}

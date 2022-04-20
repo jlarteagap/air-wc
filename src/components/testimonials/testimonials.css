@@ -14,11 +14,12 @@
     position: relative;
 }
     .testimonial__carrousel-photo::after{
-        background-color: var(--primary);
+        background-image: url('../../assets/quote.png');
+        background-size: cover;
         border-radius: 50%;
         bottom: 0;
         color: white;
-        content: '"';
+        content: '';
         display: flex;
         font-size: 64px;
         height: 50px;

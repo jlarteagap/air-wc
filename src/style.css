@@ -7,6 +7,9 @@
 body{
     font-family: 'IBM Plex Sans', sans-serif;
 }
+p{
+    color: #6f7073
+}
 /* Social icons  */
 .social{
 
@@ -50,4 +53,18 @@ body{
 }
 .splide__pagination__page.is-active{
     background: var(--primary) !important;
+}
+
+/* /Buton  */
+
+.btn__primary{
+    background-color: var(--primary);
+    color: white;
+    border: var(--primary);
+    transition: all .4s;
+    font-weight: 600;
+}
+.btn__primary:hover, .btn__primary:focus{
+    background-color: var(--third);
+    color: white;
 }

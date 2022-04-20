@@ -38,7 +38,7 @@ function Partners() {
                 className="mt-5"
                 dangerouslySetInnerHTML={{ __html: empresa.descripcion }}
               ></div>
-              <a className="button mt-5" href="#contact">
+              <a className="button mt-5 btn__primary" href="#contact">
                 Contacto
               </a>
             </div>
@@ -46,10 +46,10 @@ function Partners() {
               <div className="trayectoria__icon">
                 <img src={rocket} loading="lazy" alt="trayectoria" />
               </div>
-              <div className="trayectoria__counter is-size-1 has-text-weight-bold mb-4">
+              <div className="trayectoria__counter is-size-1 has-text-weight-bold mb-4 has-text-weight-bold">
                 300<span>+</span>
               </div>
-              <p>
+              <p className="has-text-weight-semibold">
                 Con más de 1000 puntos de red, más de 1000 puntos eléctricos,
                 más de 200 instalaciones de sistemas de video vigilancia.
               </p>
@@ -61,7 +61,7 @@ function Partners() {
               <div className="trayectoria__counter is-size-1 has-text-weight-bold mb-4">
                 90<span>+</span>
               </div>
-              <p>
+              <p className="has-text-weight-semibold">
                 Ademas de 100 instalaciones de sistemas de climatización, como
                 también la provisión de equipos informáticos y soporte técnico
                 de TI.

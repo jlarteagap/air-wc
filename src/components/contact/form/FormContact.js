@@ -54,7 +54,7 @@ export const FormContact = () => {
                 </div>
               </div>
               <TextField label="Mensaje" name="mensaje" />
-              <button type="submit" className="button is-success mt-3">
+              <button type="submit" className="button btn__primary mt-3">
                 Enviar mensaje
               </button>
             </Form>
