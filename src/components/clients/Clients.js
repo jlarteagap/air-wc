@@ -14,7 +14,6 @@ const Clients = () => {
       try {
         const res = await getSlide('clientes')
         setClients(res.records)
-
         updateClients()
       } catch (error) {
         console.log(error)
