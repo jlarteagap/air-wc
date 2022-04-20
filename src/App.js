@@ -6,8 +6,8 @@ import {
   Testimonials,
   Team,
   Services,
-  Partners
-  // Header
+  Partners,
+  Header
   // Slide
 } from './components'
 import { AppProvider } from './context/AppContext'
@@ -15,7 +15,7 @@ function App() {
   return (
     <AppProvider>
       <div className="App">
-        {/* <Header /> */}
+        <Header />
         {/* <Slide /> */}
         <Services />
         <Partners />

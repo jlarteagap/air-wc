@@ -20,23 +20,25 @@ function Slide() {
 
   return (
     <div className="slide__content">
-      <Slider className="slider-wrapper" infinite autoplay={3000} touched>
-        {slide.map((item, index) => (
-          <div
-            key={index}
-            className="slider-content"
-            style={{
-              background: `url('${item.URL}') no-repeat center center`
-            }}
-          >
-            <div className="inner">
-              <h1>{item.title}</h1>
-              <div dangerouslySetInnerHTML={{ __html: item.DESCRIPCION }} />
-              <button className="button is-success">Button</button>
+      {slide && (
+        <Slider className="slider-wrapper" infinite autoplay={3000} touched>
+          {slide.map((item, index) => (
+            <div
+              key={index}
+              className="slider-content"
+              style={{
+                background: `url('${item.URL}') no-repeat center center`
+              }}
+            >
+              <div className="inner">
+                <h1>{item.title}</h1>
+                <div dangerouslySetInnerHTML={{ __html: item.DESCRIPCION }} />
+                <button className="button is-success">Button</button>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </Slider>
+      )}
     </div>
   )
 }
