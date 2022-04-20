@@ -20,8 +20,16 @@
     font-weight: 600;
 }
 
+.header__navbar-menu{
+    margin-left: 0;
+}
+.header__navbar-menu:hover{
+    background: transparent;
+}
 .header__navbar-brand{
+    align-items: center;
     background-color: var(--secondary);
+    justify-content: space-between;
 }
 .header__navbar-brand-white{
     background: white;
@@ -66,4 +74,28 @@
 }
 .menuTooltip__body-titles{
     color: var(--primary);
+}
+.menu__hidden-brand{
+    display: none;
+    margin-right: 1rem;
+}
+.header__navbar-menu-color{
+    background: var(--secondary);
+}
+
+@media only screen and (max-width: 768px){
+    .menuTooltip{
+        width: 50%;
+    }
+    .menu__hidden-brand{
+        display: block;
+    }
+    .menu__hidden{
+        display: none;
+    }
+}
+@media only screen and (max-width: 480px){
+    .menuTooltip{
+        width: 80%;
+    }
 }

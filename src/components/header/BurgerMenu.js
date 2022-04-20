@@ -5,7 +5,9 @@ export const BurgerMenu = ({ isActive, onClick }) => {
     <div
       onClick={onClick}
       role="button"
-      className={`navbar-burger ${isActive ? 'is-active' : ''}`}
+      className={`header__navbar-menu navbar-burger ${
+        isActive ? 'is-active' : ''
+      }`}
     >
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
