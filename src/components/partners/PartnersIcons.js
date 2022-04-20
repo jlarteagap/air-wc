@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getSlide } from '../../api/Api'
 
-export const PartnersIcons = () => {
+export const PartnersIcons = ({ onChange }) => {
   const [partners, setPartners] = useState([])
 
   useEffect(() => {
@@ -9,12 +9,12 @@ export const PartnersIcons = () => {
       try {
         const res = await getSlide('partners')
         setPartners(res.records)
+        onChange()
       } catch (error) {
         console.log(error)
       }
     })()
   }, [])
-  console.log(partners)
   return (
     <>
       {partners.map(img => {

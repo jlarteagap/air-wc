@@ -3,7 +3,10 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import { getData } from '../../api/Api'
 import './testimonials.css'
 import profile from '../../assets/profile.png'
+import useData from '../../hooks/useData'
+
 const Testimonials = () => {
+  const { updateTestimonial } = useData()
   const [testimonials, setTestimonials] = useState([])
   useEffect(() => {
     ;(async () => {
@@ -16,6 +19,11 @@ const Testimonials = () => {
     })()
   }, [])
 
+  useEffect(() => {
+    if (testimonials.length > 0) {
+      updateTestimonial()
+    }
+  }, [testimonials])
   //  Carousel options
   const options = {
     arrows: false,
@@ -28,7 +36,7 @@ const Testimonials = () => {
   }
 
   return (
-    <div className="testimonials">
+    <div className="testimonials" id="testimonios">
       {testimonials && (
         <div className="container is-flex is-justify-content-center">
           <Splide

@@ -34,6 +34,12 @@
         padding: 0 1rem;
     }
 }
+.footer .header__navbar-item{
+    line-height: 1;
+}
+.footer .header__navbar-item:hover{
+    background-color: transparent;
+}
 @media only screen and (max-width: 480px){
 
     .footer__links-content{

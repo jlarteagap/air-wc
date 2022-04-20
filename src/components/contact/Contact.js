@@ -8,6 +8,7 @@ import decoracion from '../../assets/arrows.svg'
 
 const Contact = () => {
   const { empresa } = useData()
+
   return (
     <div className="contact" id="contacto">
       <div className="container">

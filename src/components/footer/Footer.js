@@ -4,7 +4,7 @@ import useData from '../../hooks/useData'
 import { SocialIcons } from '../utils/SocialIcons'
 import { FooterServices } from './FooterServicios'
 import airWhite from '../../assets/air-logo-w.svg'
-
+import { Menu } from '../header/Menu'
 const Footer = () => {
   const { empresa } = useData()
 
@@ -39,10 +39,7 @@ const Footer = () => {
                   Import Links
                 </h3>
                 <ul>
-                  <li>Sobre nosotros</li>
-                  <li>Equipo</li>
-                  <li>Novedades</li>
-                  <li>Dirección</li>
+                  <Menu />
                 </ul>
               </div>
               <div className="footer__links-items">

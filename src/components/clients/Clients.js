@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import './client.css'
-
+import useData from '../../hooks/useData'
 import { getSlide } from '../../api/Api'
+
 const Clients = () => {
+  const { updateClients } = useData()
   const [clients, setClients] = useState([])
+
   useEffect(() => {
     ;(async () => {
       try {
@@ -17,7 +20,12 @@ const Clients = () => {
     })()
   }, [])
 
-  console.log(clients)
+  useEffect(() => {
+    if (clients.length > 0) {
+      updateClients()
+    }
+  }, [clients])
+
   const mainOptions = {
     arrows: false,
     rewind: true,
@@ -35,8 +43,9 @@ const Clients = () => {
       }
     }
   }
+
   return (
-    <div className="clients">
+    <div className="clients" id="clientes">
       {clients && (
         <div className="container">
           <Splide

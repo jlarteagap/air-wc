@@ -8,8 +8,9 @@ import { PartnersIcons } from './PartnersIcons'
 
 function Partners() {
   const { empresa } = useData()
+
   return (
-    <div className="partners">
+    <div className="partners" id="partners">
       {empresa && (
         <div className="container">
           <div className="partners__content is-flex is-justify-content-center ">
@@ -38,7 +39,7 @@ function Partners() {
                 className="mt-5"
                 dangerouslySetInnerHTML={{ __html: empresa.descripcion }}
               ></div>
-              <a className="button mt-5 btn__primary" href="#contact">
+              <a className="button mt-5 btn__primary" href="#contacto">
                 Contacto
               </a>
             </div>

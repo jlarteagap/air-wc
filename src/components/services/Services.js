@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { getData } from '../../api/Api'
+import useData from '../../hooks/useData'
 import './services.css'
 
 import decoracion from '../../assets/arrows.svg'
 
 function Services() {
+  const { updateService } = useData()
   const [services, setServices] = useState([])
 
   useEffect(() => {
@@ -18,8 +20,13 @@ function Services() {
     })()
   }, [])
 
+  useEffect(() => {
+    if (services.length > 0) {
+      updateService()
+    }
+  }, [services])
   return (
-    <div className="services">
+    <div className="services" id="servicios">
       {services && (
         <div className="container">
           <div className="services__content is-flex is-justify-content-center ">

@@ -1,6 +1,6 @@
 .testimonials{
     background: url('../../assets/testimonial-bg.png') no-repeat center bottom / cover;
-    padding: 5rem 0;
+    padding: 6rem 0;
 }
 .testimonial__carrousel{
     max-width: 800px;
