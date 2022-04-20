@@ -1,11 +1,14 @@
+import React, { useState } from 'react'
 import { Formik, Form } from 'formik'
-import React from 'react'
 import * as Yup from 'yup'
 import { InputField } from './InputField'
 import { SelectField } from './SelectField'
 import { TextField } from './TextField'
+const { API_HOST, A, E, UB } = window.CONFIG
 
 export const FormContact = () => {
+  const [status, setStatus] = useState(false)
+
   const validate = Yup.object({
     nombre: Yup.string().required('Nombre son requeridos'),
     email: Yup.string()
@@ -30,34 +33,62 @@ export const FormContact = () => {
           mensaje: ''
         }}
         validationSchema={validate}
-        onSubmit={value => {
-          console.log(value)
+        onSubmit={values => {
+          const url = `${API_HOST}/contactos/?a=${A}&e=${E}&ub=${UB}`
+
+          fetch(url, {
+            mode: 'cors',
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: new URLSearchParams(values)
+          })
+            .then(response => response.json())
+            .then(data => {
+              if (data.message === 'OK') {
+                setStatus(!status)
+              }
+            })
+            .then(
+              setTimeout(() => {
+                setStatus(false)
+              }, 1000)
+            )
         }}
       >
         {formik => (
           <div>
-            <Form>
-              <div className="columns">
-                <div className="column">
-                  <InputField label="Nombre" type="text" name="nombre" />
+            {status ? (
+              <>
+                <div className="notification is-success is-light">
+                  Su mensaje ha sido enviado correctamente.
                 </div>
-                <div className="column">
-                  <InputField label="Email" type="email" name="email" />
+              </>
+            ) : (
+              <Form>
+                <div className="columns">
+                  <div className="column">
+                    <InputField label="Nombre" type="text" name="nombre" />
+                  </div>
+                  <div className="column">
+                    <InputField label="Email" type="email" name="email" />
+                  </div>
                 </div>
-              </div>
-              <div className="columns">
-                <div className="column">
-                  <InputField label="Teléfono" type="text" name="telefono" />
+                <div className="columns">
+                  <div className="column">
+                    <InputField label="Teléfono" type="text" name="telefono" />
+                  </div>
+                  <div className="column">
+                    <SelectField name="ciudad" label="Ciudad" />
+                  </div>
                 </div>
-                <div className="column">
-                  <SelectField name="ciudad" label="Ciudad" />
-                </div>
-              </div>
-              <TextField label="Mensaje" name="mensaje" />
-              <button type="submit" className="button btn__primary mt-3">
-                Enviar mensaje
-              </button>
-            </Form>
+                <TextField label="Mensaje" name="mensaje" />
+                <button type="submit" className="button btn__primary mt-3">
+                  Enviar mensaje
+                </button>
+              </Form>
+            )}
           </div>
         )}
       </Formik>

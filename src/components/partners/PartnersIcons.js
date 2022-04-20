@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getSlide } from '../../api/Api'
 
-export const PartnersIcons = ({ onChange }) => {
+export const PartnersIcons = () => {
   const [partners, setPartners] = useState([])
 
   useEffect(() => {
@@ -9,7 +9,6 @@ export const PartnersIcons = ({ onChange }) => {
       try {
         const res = await getSlide('partners')
         setPartners(res.records)
-        onChange()
       } catch (error) {
         console.log(error)
       }
