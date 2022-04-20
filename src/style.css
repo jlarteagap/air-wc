@@ -1,7 +1,11 @@
 :root{
     --primary: #0093ff;
     --secondary: #0D0F18;
-    --third: #000033; 
+    --third: rgb(0, 0, 51); 
+}
+
+body{
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 /* Social icons  */
 .social{

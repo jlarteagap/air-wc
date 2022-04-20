@@ -7,8 +7,8 @@ import {
   Team,
   Services,
   Partners,
-  Header
-  // Slide
+  Header,
+  Slide
 } from './components'
 import { AppProvider } from './context/AppContext'
 function App() {
@@ -16,7 +16,7 @@ function App() {
     <AppProvider>
       <div className="App">
         <Header />
-        {/* <Slide /> */}
+        <Slide />
         <Services />
         <Partners />
         <Team />

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import Slider from 'react-animated-slider'
+// import Slider from 'react-animated-slider'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
 import 'react-animated-slider/build/horizontal.css'
 import './slide.css'
 import { getSlide } from '../../api/Api'
@@ -17,27 +18,40 @@ function Slide() {
       }
     })()
   }, [])
+  const options = {
+    rewind: true,
+    pagination: false,
+    interval: 5000,
+    autoplay: true,
+    perPage: 1,
+    perMove: 1,
+    type: 'loop'
+  }
 
   return (
     <div className="slide__content">
       {slide && (
-        <Slider className="slider-wrapper" infinite autoplay={3000} touched>
-          {slide.map((item, index) => (
-            <div
-              key={index}
-              className="slider-content"
-              style={{
-                background: `url('${item.URL}') no-repeat center center`
-              }}
-            >
-              <div className="inner">
-                <h1>{item.title}</h1>
-                <div dangerouslySetInnerHTML={{ __html: item.DESCRIPCION }} />
-                <button className="button is-success">Button</button>
-              </div>
-            </div>
-          ))}
-        </Slider>
+        <Splide
+          className="slide__carrousel"
+          aria-label="Testimonios"
+          options={options}
+        >
+          {slide.map((item, index) => {
+            return (
+              <SplideSlide
+                key={index}
+                className="slider__content"
+                style={{
+                  backgroundImage: `url('${item.URL}')`
+                }}
+              >
+                <div className="inner">
+                  <div dangerouslySetInnerHTML={{ __html: item.DESCRIPCION }} />
+                </div>
+              </SplideSlide>
+            )
+          })}
+        </Splide>
       )}
     </div>
   )
