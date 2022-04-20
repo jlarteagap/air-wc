@@ -21,10 +21,8 @@ const Clients = () => {
   }, [])
 
   useEffect(() => {
-    if (clients.length > 0) {
-      updateClients()
-    }
-  }, [])
+    clients && updateClients()
+  }, [clients])
 
   const mainOptions = {
     arrows: false,
