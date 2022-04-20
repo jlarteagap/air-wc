@@ -24,7 +24,7 @@ const Clients = () => {
     if (clients.length > 0) {
       updateClients()
     }
-  }, [clients])
+  }, [])
 
   const mainOptions = {
     arrows: false,
