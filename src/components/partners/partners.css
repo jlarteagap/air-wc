@@ -17,8 +17,7 @@
 .trayectoria__texts{
     padding-right: 12rem;
 }
-
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1024px){
     .partners{
         padding: 3rem 1rem;
     }
@@ -28,13 +27,18 @@
     .trayectoria__texts{
         padding: 0;
     }
-    .trayectoria__counters{
-        text-align: center;
-    }
     .trayectoria{
         padding: 0 1rem;
         box-sizing: border-box;
     }
+    .trayectoria__counters{
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 768px){
+
+
+    
 }
 @media only screen and (max-width: 480px){
     .partners-icons img{

@@ -32,7 +32,7 @@
 .testimonial__carrousel-message{
     line-height: 1.25;
 }
-
+@media only screen and (max-width: 1024px){}
 @media only screen and (max-width: 768px){
     .testimonials{
         padding: 5rem 1rem;
