@@ -15,7 +15,6 @@ function Team() {
     })()
   }, [])
 
-  console.log(team)
   return (
     <div className="team">
       <div className="container">

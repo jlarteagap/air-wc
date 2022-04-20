@@ -4,8 +4,11 @@ import './header.css'
 import { HiOutlineMenuAlt3 } from 'react-icons/hi'
 import logo from '../../assets/air-logo.svg'
 import logoW from '../../assets/air-logo-w.svg'
+import { Menu } from './Menu'
+import { BurgerMenu } from './BurgerMenu'
 function Header() {
   const [menu, setMenu] = useState(false)
+  const [isActive, setIsActive] = useState(false)
   const [bgMenu, setBgMenu] = useState(false)
 
   const changeNavbarColor = () => {
@@ -31,6 +34,12 @@ function Header() {
             bgMenu && 'header__navbar-brand-white'
           }`}
         >
+          <BurgerMenu
+            isActive={isActive}
+            onClick={() => {
+              setIsActive(!isActive)
+            }}
+          />
           <a className="navbar-item" href="https://bulma.io">
             <img
               className="header__logo"
@@ -38,29 +47,11 @@ function Header() {
               alt="AIR"
             />
           </a>
-
-          <div
-            role="button"
-            className="navbar-burger"
-            aria-label="menu"
-            aria-expanded="false"
-            data-target="navbarBasicExample"
-          >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </div>
         </div>
 
-        <div id="navbarBasicExample" className="navbar-menu">
+        <div className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
           <div className="navbar-start">
-            <a className="header__navbar-item navbar-item" href="#Home">
-              Home
-            </a>
-
-            <a className="header__navbar-item navbar-item" href="#Services">
-              Documentation
-            </a>
+            <Menu />
           </div>
 
           <div className="navbar-end is-align-items-center">

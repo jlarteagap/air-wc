@@ -5,6 +5,7 @@
 .header__navbar .header__navbar-item{
     color: white;
     font-weight: 600;
+    transition: all .4s;
 }
 .header__navbar .header__navbar-item:hover{
     background: transparent;

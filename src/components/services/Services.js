@@ -18,7 +18,6 @@ function Services() {
     })()
   }, [])
 
-  console.log(services)
   return (
     <div className="services">
       <div className="container">
