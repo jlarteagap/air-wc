@@ -14,7 +14,7 @@ const Contact = () => {
         <div className="columns">
           <div className="contact__info column">
             <h3 className="contact__info-title">Contáctanos ahora</h3>
-            <h3 className="contact__info-subtitle is-size-4">
+            <h3 className="contact__info-subtitle is-size-4 is-size-5-mobile">
               Adquiere nuestros servicios
             </h3>
             <img src={decoracion} alt="decoracion" />

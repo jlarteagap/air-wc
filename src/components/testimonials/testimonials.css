@@ -32,3 +32,20 @@
 .testimonial__carrousel-message{
     line-height: 1.25;
 }
+
+@media only screen and (max-width: 768px){
+    .testimonials{
+        padding: 5rem 1rem;
+    }
+    .testimonial__carrousel{
+        max-width: 500px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .testimonials{
+        padding: 3rem 1rem;
+    }
+    .testimonial__carrousel{
+        max-width: 350px;
+    }
+}

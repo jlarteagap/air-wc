@@ -1,36 +1,59 @@
-import React from 'react'
-// import { Splide, SplideSlide } from '@splidejs/react-splide'
+import React, { useEffect, useState } from 'react'
+import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import './client.css'
-import clients from '../../assets/clients.png'
+
+import { getSlide } from '../../api/Api'
 const Clients = () => {
-  // const mainOptions = {
-  //   arrows: false,
-  //   rewind: true,
-  //   gap: '1rem',
-  //   autoplay: true,
-  //   perMove: 1,
-  //   type: 'loop'
-  // }
+  const [clients, setClients] = useState([])
+  useEffect(() => {
+    ;(async () => {
+      try {
+        const res = await getSlide('clientes')
+        setClients(res.records)
+      } catch (error) {
+        console.log(error)
+      }
+    })()
+  }, [])
+
+  console.log(clients)
+  const mainOptions = {
+    arrows: false,
+    rewind: true,
+    gap: '1rem',
+    autoplay: true,
+    perMove: 1,
+    type: 'loop',
+    perPage: 6,
+    breakpoints: {
+      640: {
+        perPage: 3
+      },
+      768: {
+        perPage: 4
+      }
+    }
+  }
   return (
     <div className="clients">
-      <div className="container">
-        <center>
-          <img src={clients} loading="lazy" width="800px" alt="Clientes" />
-        </center>
-        {/* <Splide
-          aria-label="My Favorite Images"
-          options={mainOptions}
-          className="clientes__carousel"
-        >
-          <SplideSlide>
-            <img src="image1.jpg" alt="Image 1" />
-          </SplideSlide>
-          <SplideSlide>
-            <img src="image2.jpg" alt="Image 2" />
-          </SplideSlide>
-        </Splide> */}
-      </div>
+      {clients && (
+        <div className="container">
+          <Splide
+            aria-label="Clientes"
+            options={mainOptions}
+            className="clientes__carousel"
+          >
+            {clients.map(icon => {
+              return (
+                <SplideSlide key={icon.ID_FOTO}>
+                  <img src={icon.URL} alt={icon.ID_FOTO} />
+                </SplideSlide>
+              )
+            })}
+          </Splide>
+        </div>
+      )}
     </div>
   )
 }

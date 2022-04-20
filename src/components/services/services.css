@@ -33,3 +33,27 @@
 .services__item-img{
 
 }
+
+@media only screen and (max-width: 768px){
+    .services{
+        padding: 3rem 1rem;
+    }
+    .services__items{
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 1rem;
+        grid-gap: .4rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .services{
+        padding: 2rem 1rem;
+    }
+    .services__item{
+        margin-top: 1rem;
+    }
+    .services__items{
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 1rem;
+        grid-gap: .4rem;
+    }
+}

@@ -20,3 +20,11 @@
     width: 150px;
     height: 150px;
 }
+
+@media only screen and (max-width: 480px){
+    .team{
+        padding: 5rem 1rem;
+        background: var(--third);
+        color: white;
+    }
+}

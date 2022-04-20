@@ -27,7 +27,7 @@ const Footer = () => {
             ></div>
           </div>
           <div className="footer__links column is-8">
-            <div className="is-flex is-justify-content-space-around">
+            <div className="footer__links-content is-flex is-justify-content-space-around">
               <div className="footer__links-items">
                 <h3 className="footer__links-title is-size-5 pb-3">
                   IT Services

@@ -41,3 +41,9 @@
 .form__select, .select__expanded{
     width: 100%;
 }
+.splide__pagination{
+    bottom: -2rem !important;
+}
+.splide__pagination__page.is-active{
+    background: var(--primary) !important;
+}

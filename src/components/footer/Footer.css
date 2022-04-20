@@ -29,3 +29,18 @@
 .footer a:hover{
     color: var(--primary);
 }
+@media only screen and (max-width: 768px){
+    .footer{
+        padding: 0 1rem;
+    }
+}
+@media only screen and (max-width: 480px){
+
+    .footer__links-content{
+        flex-direction: column;
+    }
+    .footer__links-items{
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
