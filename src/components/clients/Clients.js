@@ -20,11 +20,12 @@ const Clients = () => {
     })()
   }, [])
 
-  useCallback(() => {
+  useEffect(() => {
     if (clients.length > 0) {
       updateClients()
     }
-  }, [clients])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const mainOptions = {
     arrows: false,
