@@ -24,6 +24,7 @@ function Services() {
     if (services.length > 0) {
       updateService()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [services])
   return (
     <div className="services" id="servicios">

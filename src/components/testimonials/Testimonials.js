@@ -23,6 +23,7 @@ const Testimonials = () => {
     if (testimonials.length > 0) {
       updateTestimonial()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [testimonials])
   //  Carousel options
   const options = {
