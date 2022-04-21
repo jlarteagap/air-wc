@@ -19,6 +19,7 @@ function Slide() {
     })()
   }, [])
   const options = {
+    arrows: false,
     rewind: true,
     pagination: false,
     interval: 5000,

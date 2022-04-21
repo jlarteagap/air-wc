@@ -20,7 +20,7 @@ function Partners() {
               </h3>
             </div>
           </div>
-          <div className="is-flex is-justify-content-center my-5">
+          <div className="partners__icons is-flex is-justify-content-center my-5">
             <PartnersIcons />
           </div>
           <div className="my-4">

@@ -39,6 +39,9 @@
     height: auto !important;
     max-height: 65px !important;
 }
+.menu__hidden{
+    /* border-left: 1px solid white; */
+}
 .menu__hidden-icon{
     cursor: pointer;
     color: white;

@@ -3,6 +3,9 @@
     background: var(--secondary);
     padding: 0 0 5rem;
 }
+.footer p{
+    color: white;
+}
 .footer__logo{
     width: 70px;
 }

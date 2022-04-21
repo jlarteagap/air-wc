@@ -20,8 +20,8 @@ const Contact = () => {
             </h3>
             <img src={decoracion} alt="decoracion" />
             <div className="contact__info-data is-flex mt-5">
-              <div className="contact__icons">
-                <img src={contact} alt="" className="contact__icons-img" />
+              <div className="contact__icons is-flex is-justify-content-center is-align-items-center">
+                <img src={contact} alt="" className="contact__icons-img " />
               </div>
               <div className="">
                 <h4 className="contact__info-data-title">Contacto</h4>
@@ -34,7 +34,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="contact__info-data is-flex mt-5">
-              <div className="contact__icons">
+              <div className="contact__icons is-flex is-justify-content-center is-align-items-center">
                 <img src={pin} alt="" className="contact__icons-img" />
               </div>
               <div className="">

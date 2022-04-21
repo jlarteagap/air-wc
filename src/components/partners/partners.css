@@ -1,5 +1,9 @@
 .partners{
-    padding-bottom: 5rem;
+    padding: 5rem 0;
+}
+
+.partners__icons{
+    gap: 2rem;
 }
 .partners-icons img{
     width: 140px;

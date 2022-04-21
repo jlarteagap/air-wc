@@ -7,6 +7,7 @@ import logoW from '../../assets/air-logo-w.svg'
 import { Menu } from './Menu'
 import { BurgerMenu } from './BurgerMenu'
 import useData from '../../hooks/useData'
+import { SocialIcons } from '../utils/SocialIcons'
 function Header() {
   const { empresa } = useData()
   const [menu, setMenu] = useState(false)
@@ -66,11 +67,16 @@ function Header() {
           }`}
         >
           <div className="navbar-start">
-            <Menu />
+            <Menu
+              onClick={() => {
+                setIsActive(!isActive)
+              }}
+            />
           </div>
 
           <div className="navbar-end is-align-items-center">
-            <div className="menu__hidden mr-5">
+            <SocialIcons colored={bgMenu && 'secondary'} size={16} />
+            <div className="menu__hidden px-3 ml-3">
               <HiOutlineMenuAlt3
                 size={24}
                 className={`menu__hidden-icon ${
