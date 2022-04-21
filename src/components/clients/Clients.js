@@ -25,7 +25,7 @@ const Clients = () => {
       updateClients()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [clients])
 
   const mainOptions = {
     arrows: false,
