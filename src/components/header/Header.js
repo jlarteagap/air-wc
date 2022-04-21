@@ -8,6 +8,8 @@ import { Menu } from './Menu'
 import { BurgerMenu } from './BurgerMenu'
 import useData from '../../hooks/useData'
 import { SocialIcons } from '../utils/SocialIcons'
+import { Support } from './Support'
+
 function Header() {
   const { empresa } = useData()
   const [menu, setMenu] = useState(false)
@@ -75,22 +77,7 @@ function Header() {
           </div>
 
           <div className="navbar-end is-align-items-center">
-            <a
-              className="header__navbar-item navbar-item"
-              target="_blank"
-              href="http://wa.me/59173498898"
-              rel="noreferrer"
-            >
-              Dell
-            </a>
-            <a
-              className="header__navbar-item navbar-item mr-5"
-              target="_blank"
-              href="http://wa.me/59173498898"
-              rel="noreferrer"
-            >
-              Cisco
-            </a>
+            <Support />
 
             <SocialIcons colored={bgMenu && 'secondary'} size={16} />
             <div className="menu__hidden px-3 ml-3">
