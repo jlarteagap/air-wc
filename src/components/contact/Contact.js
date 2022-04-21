@@ -1,7 +1,7 @@
 import React from 'react'
 import './contact.css'
 import useData from '../../hooks/useData'
-import { FormContact } from './form/FormContact'
+import { FormContact } from '../utils/form/FormContact'
 import pin from '../../assets/pin.png'
 import contact from '../../assets/contact.png'
 import decoracion from '../../assets/arrows.svg'
