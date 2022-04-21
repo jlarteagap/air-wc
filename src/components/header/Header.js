@@ -75,6 +75,23 @@ function Header() {
           </div>
 
           <div className="navbar-end is-align-items-center">
+            <a
+              className="header__navbar-item navbar-item"
+              target="_blank"
+              href="http://wa.me/59173498898"
+              rel="noreferrer"
+            >
+              Dell
+            </a>
+            <a
+              className="header__navbar-item navbar-item mr-5"
+              target="_blank"
+              href="http://wa.me/59173498898"
+              rel="noreferrer"
+            >
+              Cisco
+            </a>
+
             <SocialIcons colored={bgMenu && 'secondary'} size={16} />
             <div className="menu__hidden px-3 ml-3">
               <HiOutlineMenuAlt3
