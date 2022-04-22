@@ -22,11 +22,19 @@ function Slide() {
     arrows: false,
     rewind: true,
     pagination: false,
-    interval: 5000,
+    interval: 3000,
     autoplay: true,
+    lazyLoad: 'sequential',
     perPage: 1,
     perMove: 1,
-    type: 'loop'
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    type: 'loop',
+    breakpoints: {
+      640: {
+        arrows: true
+      }
+    }
   }
 
   return (

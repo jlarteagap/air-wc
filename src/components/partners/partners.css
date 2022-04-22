@@ -40,9 +40,9 @@
     }
 }
 @media only screen and (max-width: 768px){
-
-
-    
+    .partners{
+        padding: 5rem 1rem;
+    }
 }
 @media only screen and (max-width: 480px){
     .partners-icons img{

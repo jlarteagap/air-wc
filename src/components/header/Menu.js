@@ -11,7 +11,7 @@ export const Menu = ({ onClick }) => {
         href="#inicio"
         onClick={onClick}
       >
-        Home
+        Inicio
       </a>
       {serviceContext && (
         <a

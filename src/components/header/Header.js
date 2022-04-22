@@ -41,6 +41,7 @@ function Header() {
         >
           <BurgerMenu
             isActive={isActive}
+            bgMenu={bgMenu}
             onClick={() => {
               setIsActive(!isActive)
             }}
@@ -83,7 +84,9 @@ function Header() {
               }}
             />
 
-            <SocialIcons colored={bgMenu && 'secondary'} size={16} />
+            <div className="header__social-icon">
+              <SocialIcons colored={bgMenu && 'secondary'} size={16} />
+            </div>
             <div className="menu__hidden px-3 ml-3">
               <HiOutlineMenuAlt3
                 size={24}

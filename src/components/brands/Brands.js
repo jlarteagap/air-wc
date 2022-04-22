@@ -18,7 +18,6 @@ function Brands() {
     })()
   }, [])
 
-  console.log(brands)
   useEffect(() => {
     if (brands.length > 0) {
       updateBrands()
@@ -49,7 +48,7 @@ function Brands() {
         <div className="container">
           <div className="brands__header has-text-centered">
             <h3 className="brands__header-title has-text-weight-bold">
-              MARCAS QUE CONFIAN
+              NUESTRAS MARCAS
             </h3>
           </div>
           <Splide className="brands__carrousel" options={mainOptions}>

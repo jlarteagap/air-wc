@@ -22,9 +22,14 @@
 }
 
 .header__navbar-menu{
+    color: white;
     margin-left: 0;
 }
-.header__navbar-menu:hover{
+.header__navbar-menu-c{
+    color: var(--secondary);
+    margin-left: 0;
+}
+.header__navbar-menu:hover, .header__navbar-menu-c:hover{
     background: transparent;
 }
 .header__navbar-brand{
@@ -97,6 +102,9 @@
     }
     .header__navbar-menu-color{
         background: var(--secondary);
+    }
+    .header__social-icon{
+        margin-top: 2rem;
     }
     /* .menu__hidden-icon{} */
 }
