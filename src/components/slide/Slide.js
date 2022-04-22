@@ -4,8 +4,9 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import 'react-animated-slider/build/horizontal.css'
 import './slide.css'
 import { getSlide } from '../../api/Api'
-
+import useData from '../../hooks/useData'
 function Slide() {
+  const { updateSlide } = useData()
   const [slide, setSlide] = useState([])
 
   useEffect(() => {
@@ -36,10 +37,15 @@ function Slide() {
       }
     }
   }
-
+  useEffect(() => {
+    if (slide.length > 0) {
+      updateSlide()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [slide])
   return (
     <div className="slide__content">
-      {slide && (
+      {slide.length > 0 && (
         <Splide
           className="slide__carrousel"
           aria-label="Testimonios"

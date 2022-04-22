@@ -14,6 +14,7 @@ export function AppProvider({ children }) {
   const [partnersContext, setPartnersContext] = useState(false)
   const [clientsContext, setClientsContext] = useState(false)
   const [brandsContext, setBrandsContext] = useState(false)
+  const [slideContext, setSlideContext] = useState(false)
 
   useEffect(() => {
     const url = `${API_HOST}/empresa/?a=${A}&e=${E}&ub=${UB}`
@@ -42,6 +43,9 @@ export function AppProvider({ children }) {
   const updateBrands = () => {
     setBrandsContext(true)
   }
+  const updateSlide = () => {
+    setSlideContext(true)
+  }
   const value = {
     empresa,
     updateService,
@@ -50,12 +54,14 @@ export function AppProvider({ children }) {
     updatePartners,
     updateClients,
     updateBrands,
+    updateSlide,
     serviceContext,
     testimonialContext,
     contactContext,
     partnersContext,
     clientsContext,
-    brandsContext
+    brandsContext,
+    slideContext
   }
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>
