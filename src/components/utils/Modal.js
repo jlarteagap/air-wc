@@ -2,7 +2,6 @@ import React from 'react'
 import { FormContact } from './form/FormContact'
 import { FaWhatsapp } from 'react-icons/fa'
 export const Modal = ({ modal, toggleModal, company }) => {
-  console.log(company)
   return (
     <>
       <div className={`modal ${modal && 'is-active'}`}>

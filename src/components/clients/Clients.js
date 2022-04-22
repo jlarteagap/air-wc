@@ -49,6 +49,11 @@ const Clients = () => {
     <div className="clients" id="clientes">
       {clients && (
         <div className="container">
+          <div className="clients__header has-text-centered">
+            <h3 className="clients__header-title has-text-weight-bold">
+              CLIENTES QUE CONFIAN
+            </h3>
+          </div>
           <Splide
             aria-label="Clientes"
             options={mainOptions}

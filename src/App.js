@@ -8,7 +8,8 @@ import {
   Services,
   Partners,
   Header,
-  Slide
+  Slide,
+  Brands
 } from './components'
 import { AppProvider } from './context/AppContext'
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Slide />
         <Services />
         <Partners />
+        <Brands />
         <Team />
         <Testimonials />
         <Clients />

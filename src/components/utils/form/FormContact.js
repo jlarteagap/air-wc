@@ -34,7 +34,7 @@ export const FormContact = ({ toggleModal, link, tipo }) => {
           mensaje: ''
         }}
         validationSchema={validate}
-        onSubmit={values => {
+        onSubmit={(values, { resetForm }) => {
           let data
           if (tipo) {
             console.log(tipo)
@@ -61,8 +61,9 @@ export const FormContact = ({ toggleModal, link, tipo }) => {
             .then(
               setTimeout(() => {
                 setStatus(false)
-              }, 10000)
+              }, 5000)
             )
+            .then(resetForm())
         }}
       >
         {formik => (

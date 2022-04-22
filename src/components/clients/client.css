@@ -1,3 +1,6 @@
 .clients{
-    padding: 3rem 0;
+    padding: 5rem 1rem;
+}
+.clients__header-title{
+    color: var(--primary);
 }

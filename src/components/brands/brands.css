@@ -1,0 +1,14 @@
+.brands{
+    padding: 6rem 1rem;
+}
+.brands__header{
+
+}
+.brands__header-title{
+    color: var(--primary);
+}
+@media only screen and(max-width: 768px) {
+    .brands{
+        padding: 3rem 1rem;
+    }
+}
