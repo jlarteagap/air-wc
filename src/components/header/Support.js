@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal } from '../utils/Modal'
 
-export const Support = ({ bhMenu }) => {
+export const Support = ({ bgMenu }) => {
   const [modal, setModal] = useState(false)
   const [company, setCompany] = useState('')
 
@@ -12,7 +12,13 @@ export const Support = ({ bhMenu }) => {
 
   return (
     <div className="is-flex is-flex-direction-column">
-      <p className="pl-2 is-size-7">Soporte</p>
+      <p
+        className={`pl-2 is-size-7 ${
+          bgMenu ? 'header__support-pw' : 'header__support-p'
+        }`}
+      >
+        Soporte
+      </p>
       <div className="">
         <div
           className="header__navbar-item button is-small header__navbar-button mx-2"

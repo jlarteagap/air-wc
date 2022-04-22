@@ -82,6 +82,7 @@ function Header() {
               onClick={() => {
                 setIsActive(!isActive)
               }}
+              bgMenu={bgMenu}
             />
 
             <div className="header__social-icon">
