@@ -1,6 +1,6 @@
 import React from 'react'
 import { useField, ErrorMessage } from 'formik'
-export const InputField = ({ label, ...props }) => {
+export const InputField = ({ company, label, ...props }) => {
   const [field, meta] = useField(props)
   return (
     <div>
@@ -8,6 +8,7 @@ export const InputField = ({ label, ...props }) => {
       <input
         className={`input ${meta.touched && meta.error && 'is-danger'}`}
         autoComplete="off"
+        value={{ ...company }}
         {...field}
         {...props}
       />

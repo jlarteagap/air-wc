@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { FormContact } from './form/FormContact'
 export const Modal = ({ modal, toggleModal, company }) => {
   return (
     <>
@@ -11,7 +11,11 @@ export const Modal = ({ modal, toggleModal, company }) => {
             <button className="delete" onClick={toggleModal}></button>
           </header>
           <section className="modal-card-body">
-            <>Hola desde {company}</>
+            <FormContact
+              toggleModal={toggleModal}
+              link="soporte"
+              tipo={company}
+            />
           </section>
         </div>
       </div>

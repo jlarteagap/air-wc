@@ -77,7 +77,11 @@ function Header() {
           </div>
 
           <div className="navbar-end is-align-items-center">
-            <Support />
+            <Support
+              onClick={() => {
+                setIsActive(!isActive)
+              }}
+            />
 
             <SocialIcons colored={bgMenu && 'secondary'} size={16} />
             <div className="menu__hidden px-3 ml-3">

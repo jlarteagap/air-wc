@@ -47,7 +47,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="contact__form column">
-            <FormContact />
+            <FormContact link="contactos" />
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal } from '../utils/Modal'
 
-export const Support = () => {
+export const Support = ({ onClick }) => {
   const [modal, setModal] = useState(false)
   const [company, setCompany] = useState('')
 
@@ -12,7 +12,13 @@ export const Support = () => {
 
   return (
     <>
-      <div className="header__navbar-item navbar-item" onClick={toggleModal}>
+      <div
+        className="header__navbar-item navbar-item"
+        onClick={() => {
+          toggleModal()
+          onClick()
+        }}
+      >
         Dell
       </div>
       <div

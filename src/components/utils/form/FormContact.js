@@ -4,9 +4,10 @@ import * as Yup from 'yup'
 import { InputField } from './InputField'
 import { SelectField } from './SelectField'
 import { TextField } from './TextField'
+
 const { API_HOST, A, E, UB } = window.CONFIG
 
-export const FormContact = () => {
+export const FormContact = ({ toggleModal, link, tipo }) => {
   const [status, setStatus] = useState(false)
 
   const validate = Yup.object({
@@ -34,15 +35,22 @@ export const FormContact = () => {
         }}
         validationSchema={validate}
         onSubmit={values => {
-          const url = `${API_HOST}/contactos/?a=${A}&e=${E}&ub=${UB}`
+          let data
+          if (tipo) {
+            console.log(tipo)
+            data = { tipo, ...values }
+          } else {
+            data = values
+          }
 
+          const url = `${API_HOST}/${link}/?a=${A}&e=${E}&ub=${UB}`
           fetch(url, {
             mode: 'cors',
             method: 'POST',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: new URLSearchParams(values)
+            body: new URLSearchParams(data)
           })
             .then(response => response.json())
             .then(data => {
@@ -53,7 +61,7 @@ export const FormContact = () => {
             .then(
               setTimeout(() => {
                 setStatus(false)
-              }, 1000)
+              }, 10000)
             )
         }}
       >
@@ -64,6 +72,11 @@ export const FormContact = () => {
                 <div className="notification is-success is-light">
                   Su mensaje ha sido enviado correctamente.
                 </div>
+                {tipo && (
+                  <button className="button is-danger" onClick={toggleModal}>
+                    Cerrar
+                  </button>
+                )}
               </>
             ) : (
               <Form>
@@ -84,6 +97,15 @@ export const FormContact = () => {
                   </div>
                 </div>
                 <TextField label="Mensaje" name="mensaje" />
+                {toggleModal && (
+                  <button
+                    className="button mt-3 mr-5"
+                    type="button"
+                    onClick={toggleModal}
+                  >
+                    Cancelar
+                  </button>
+                )}
                 <button type="submit" className="button btn__primary mt-3">
                   Enviar mensaje
                 </button>
