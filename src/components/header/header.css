@@ -40,6 +40,10 @@
 .header__navbar-brand-white{
     background: white;
 }
+
+.header__navbar-button{
+    background: transparent !important;
+}
 .header__logo{
     width: 200px !important;
     height: auto !important;

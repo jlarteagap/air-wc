@@ -12,11 +12,14 @@ export const Support = ({ onClick }) => {
 
   return (
     <>
-      <div className="header__navbar-item navbar-item" onClick={toggleModal}>
+      <div
+        className="header__navbar-item button is-small header__navbar-button mr-2"
+        onClick={toggleModal}
+      >
         Dell
       </div>
       <div
-        className="header__navbar-item navbar-item mr-5"
+        className="header__navbar-item button is-small header__navbar-button mr-4"
         onClick={toggleModal}
       >
         Cisco
