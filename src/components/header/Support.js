@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Modal } from '../utils/Modal'
 
-export const Support = ({ onClick }) => {
+export const Support = ({ bhMenu }) => {
   const [modal, setModal] = useState(false)
   const [company, setCompany] = useState('')
 
@@ -12,6 +12,7 @@ export const Support = ({ onClick }) => {
 
   return (
     <>
+      Soporte para:
       <div
         className="header__navbar-item button is-small header__navbar-button mx-2"
         onClick={toggleModal}

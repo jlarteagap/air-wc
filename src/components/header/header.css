@@ -1,4 +1,5 @@
 .header__navbar{
+    color: white;
     background: transparent;
     border-bottom: 1px solid white ;
 }
@@ -13,6 +14,7 @@
     color: var(--primary);
 }
 .header__navbar-white{
+    color: var(--secondary);
     background: white;
     border: none;
 }

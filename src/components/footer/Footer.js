@@ -3,7 +3,6 @@ import './Footer.css'
 import useData from '../../hooks/useData'
 import { SocialIcons } from '../utils/SocialIcons'
 import { FooterServices } from './FooterServicios'
-// import airWhite from '../../assets/air-logo-w.svg'
 import logo from '../../assets/air-logo-text.png'
 import { Menu } from '../header/Menu'
 const Footer = () => {

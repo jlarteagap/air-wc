@@ -69,7 +69,7 @@ function Header() {
             bgMenu || 'header__navbar-menu-color'
           }`}
         >
-          <div className="navbar-start">
+          <div className="navbar-start ml-3">
             <Menu
               onClick={() => {
                 setIsActive(!isActive)
