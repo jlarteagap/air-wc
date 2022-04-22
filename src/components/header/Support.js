@@ -11,21 +11,23 @@ export const Support = ({ bhMenu }) => {
   }
 
   return (
-    <>
-      Soporte para:
-      <div
-        className="header__navbar-item button is-small header__navbar-button mx-2"
-        onClick={toggleModal}
-      >
-        Dell
-      </div>
-      <div
-        className="header__navbar-item button is-small header__navbar-button mr-4"
-        onClick={toggleModal}
-      >
-        Cisco
+    <div className="is-flex is-flex-direction-column">
+      <p className="pl-2 is-size-7">Soporte</p>
+      <div className="">
+        <div
+          className="header__navbar-item button is-small header__navbar-button mx-2"
+          onClick={toggleModal}
+        >
+          Dell
+        </div>
+        <div
+          className="header__navbar-item button is-small header__navbar-button mr-4"
+          onClick={toggleModal}
+        >
+          Cisco
+        </div>
       </div>
       <Modal modal={modal} toggleModal={toggleModal} company={company} />
-    </>
+    </div>
   )
 }

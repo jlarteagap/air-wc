@@ -13,16 +13,8 @@ function Partners() {
     <div className="partners" id="partners">
       {empresa && (
         <div className="container">
-          <div className="partners__content is-flex is-justify-content-center ">
-            <div className="partners__header is-flex is-flex-direction-column is-align-items-center">
-              <h3 className="partners__header-title title is-4 m-0">
-                Partners
-              </h3>
-            </div>
-          </div>
-          <div className="partners__icons is-flex is-justify-content-center my-5">
-            <PartnersIcons />
-          </div>
+          <PartnersIcons />
+
           <div className="my-4">
             <h4 className="partners__trayectoria-title title is-5 has-text-weight-bold">
               Trayectoria
