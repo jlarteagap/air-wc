@@ -16,10 +16,15 @@ export const FooterServices = () => {
   }, [])
 
   return (
-    <ul>
-      {services.map(item => {
-        return <li key={item.ID_CONTENIDO}>{item.TITULO}</li>
-      })}
-    </ul>
+    <>
+      {services.length > 0 && (
+        <ul>
+          <h3 className="footer__links-title is-size-5 pb-3">IT Services</h3>
+          {services.map(item => {
+            return <li key={item.ID_CONTENIDO}>{item.TITULO}</li>
+          })}
+        </ul>
+      )}
+    </>
   )
 }

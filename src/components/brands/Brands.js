@@ -43,26 +43,28 @@ function Brands() {
     }
   }
   return (
-    <div className="brands mb-5" id="marcas">
-      {brands && (
-        <div className="container">
-          <div className="brands__header has-text-centered">
-            <h3 className="brands__header-title has-text-weight-bold">
-              NUESTRAS MARCAS
-            </h3>
+    <>
+      {brands.length > 0 && (
+        <div className="brands mb-5" id="marcas">
+          <div className="container">
+            <div className="brands__header has-text-centered">
+              <h3 className="brands__header-title has-text-weight-bold">
+                NUESTRAS MARCAS
+              </h3>
+            </div>
+            <Splide className="brands__carrousel" options={mainOptions}>
+              {brands.map(brand => {
+                return (
+                  <SplideSlide key={brand.ID_FOTO}>
+                    <img src={brand.URL} alt={brand.ID_FOTO} />
+                  </SplideSlide>
+                )
+              })}
+            </Splide>
           </div>
-          <Splide className="brands__carrousel" options={mainOptions}>
-            {brands.map(brand => {
-              return (
-                <SplideSlide key={brand.ID_FOTO}>
-                  <img src={brand.URL} alt={brand.ID_FOTO} />
-                </SplideSlide>
-              )
-            })}
-          </Splide>
         </div>
       )}
-    </div>
+    </>
   )
 }
 export default Brands

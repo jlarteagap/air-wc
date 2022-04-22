@@ -46,30 +46,32 @@ const Clients = () => {
   }
 
   return (
-    <div className="clients" id="clientes">
-      {clients && (
-        <div className="container">
-          <div className="clients__header has-text-centered">
-            <h3 className="clients__header-title has-text-weight-bold">
-              CLIENTES QUE CONFIAN
-            </h3>
+    <>
+      {clients.length > 0 && (
+        <div className="clients" id="clientes">
+          <div className="container">
+            <div className="clients__header has-text-centered">
+              <h3 className="clients__header-title has-text-weight-bold">
+                CLIENTES QUE CONFIAN
+              </h3>
+            </div>
+            <Splide
+              aria-label="Clientes"
+              options={mainOptions}
+              className="clientes__carousel"
+            >
+              {clients.map(icon => {
+                return (
+                  <SplideSlide key={icon.ID_FOTO}>
+                    <img src={icon.URL} alt={icon.ID_FOTO} />
+                  </SplideSlide>
+                )
+              })}
+            </Splide>
           </div>
-          <Splide
-            aria-label="Clientes"
-            options={mainOptions}
-            className="clientes__carousel"
-          >
-            {clients.map(icon => {
-              return (
-                <SplideSlide key={icon.ID_FOTO}>
-                  <img src={icon.URL} alt={icon.ID_FOTO} />
-                </SplideSlide>
-              )
-            })}
-          </Splide>
         </div>
       )}
-    </div>
+    </>
   )
 }
 

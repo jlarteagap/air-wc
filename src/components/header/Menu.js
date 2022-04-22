@@ -2,8 +2,13 @@ import React from 'react'
 import useData from '../../hooks/useData'
 
 export const Menu = ({ onClick }) => {
-  const { serviceContext, testimonialContext, clientsContext, brandsContext } =
-    useData()
+  const {
+    serviceContext,
+    testimonialContext,
+    clientsContext,
+    brandsContext,
+    partnersContext
+  } = useData()
   return (
     <>
       <a
@@ -22,14 +27,15 @@ export const Menu = ({ onClick }) => {
           Servicios
         </a>
       )}
-
-      <a
-        className="header__navbar-item navbar-item"
-        href="#partners"
-        onClick={onClick}
-      >
-        Partners
-      </a>
+      {partnersContext && (
+        <a
+          className="header__navbar-item navbar-item"
+          href="#partners"
+          onClick={onClick}
+        >
+          Partners
+        </a>
+      )}
       {testimonialContext && (
         <a
           className="header__navbar-item navbar-item"

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getSlide } from '../../api/Api'
-
+import useData from '../../hooks/useData'
 export const PartnersIcons = () => {
+  const { updateBrands } = useData()
   const [partners, setPartners] = useState([])
 
   useEffect(() => {
@@ -14,9 +15,16 @@ export const PartnersIcons = () => {
       }
     })()
   }, [])
+
+  useEffect(() => {
+    if (partners.length > 0) {
+      updateBrands()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [partners])
   return (
     <>
-      {partners && (
+      {partners.length > 0 && (
         <>
           <div className="partners__content is-flex is-justify-content-center ">
             <div className="partners__header is-flex is-flex-direction-column is-align-items-center">
