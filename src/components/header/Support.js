@@ -13,7 +13,7 @@ export const Support = ({ onClick }) => {
   return (
     <>
       <div
-        className="header__navbar-item button is-small header__navbar-button mr-2"
+        className="header__navbar-item button is-small header__navbar-button mx-2"
         onClick={toggleModal}
       >
         Dell
