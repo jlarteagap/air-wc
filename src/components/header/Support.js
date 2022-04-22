@@ -12,13 +12,7 @@ export const Support = ({ onClick }) => {
 
   return (
     <>
-      <div
-        className="header__navbar-item navbar-item"
-        onClick={() => {
-          toggleModal()
-          onClick()
-        }}
-      >
+      <div className="header__navbar-item navbar-item" onClick={toggleModal}>
         Dell
       </div>
       <div
