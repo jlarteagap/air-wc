@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { getSlide } from '../../api/Api'
 import useData from '../../hooks/useData'
+
 export const PartnersIcons = () => {
-  const { updateBrands } = useData()
+  const { updatePartners } = useData()
   const [partners, setPartners] = useState([])
 
   useEffect(() => {
@@ -18,7 +19,7 @@ export const PartnersIcons = () => {
 
   useEffect(() => {
     if (partners.length > 0) {
-      updateBrands()
+      updatePartners()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [partners])
