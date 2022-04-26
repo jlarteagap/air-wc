@@ -123,8 +123,9 @@
         width: 90px !important;
     }
     .header__navbar-brand .navbar-item{
-        width: 90px;
-        margin-right: calc(90% - 200px);
+        width: 60px;
+        margin-right: calc(90% - 130px);
+        padding-left: 0;
         
     }
 }

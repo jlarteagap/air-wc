@@ -19,7 +19,7 @@ export const Support = ({ bgMenu }) => {
           onClick={toggleModal}
         >
           <span className="icon is-small header__support-icon">
-            <img src={bgMenu ? icon : iconW} />
+            <img src={bgMenu ? icon : iconW} alt="support icon" />
           </span>
           Dell
         </div>
@@ -28,7 +28,7 @@ export const Support = ({ bgMenu }) => {
           onClick={toggleModal}
         >
           <span className="icon is-small header__support-icon">
-            <img src={bgMenu ? icon : iconW} />
+            <img src={bgMenu ? icon : iconW} alt="support icon" />
           </span>
           Cisco
         </div>
