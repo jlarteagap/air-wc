@@ -21,7 +21,7 @@ function Partners() {
         </div>
         <div className="trayectoria columns is-desktop">
           <div className="trayectoria__texts column is-6">
-            <p className="is-size-3 is-size-6-mobile has-text-weight-bold">
+            <p className="is-size-3 is-size-6-mobile has-text-weight-bold pb-5">
               Contamos con más de 11 años de experiencia dentro del ámbito de
               las T.I., brindando soluciones
             </p>
