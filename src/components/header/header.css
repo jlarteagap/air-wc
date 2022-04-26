@@ -3,7 +3,7 @@
     background: transparent;
     border-bottom: 1px solid white ;
 }
-.header__navbar .header__navbar-item{
+.header__navbar .header__navbar-item {
     color: white;
     font-weight: 600;
     transition: all .4s;
@@ -14,12 +14,12 @@
     color: var(--primary);
 }
 .header__navbar-white{
-    color: var(--secondary);
+    color: var(--third);
     background: white;
     border: none;
 }
 .header__navbar-white .header__navbar-item {
-    color: var(--secondary);
+    color: var(--third);
     font-weight: 600;
 }
 
@@ -28,21 +28,18 @@
     margin-left: 0;
 }
 .header__navbar-menu-c{
-    color: var(--secondary);
+    color: var(--third);
     margin-left: 0;
 }
-.header__support-p{
-    color: white;
-}
-.header__support-pw{
-    color: var(--secondary);
+.header__support-icon{
+    margin-right: .4rem !important;
 }
 .header__navbar-menu:hover, .header__navbar-menu-c:hover{
     background: transparent;
 }
 .header__navbar-brand{
     align-items: center;
-    background-color: var(--secondary);
+    background-color: var(--third);
     justify-content: space-between;
 }
 .header__navbar-brand-white{
@@ -57,16 +54,14 @@
     height: auto !important;
     max-height: 65px !important;
 }
-.menu__hidden{
-    /* border-left: 1px solid white; */
-}
+
 .menu__hidden-icon{
     cursor: pointer;
     color: white;
     transition: all .3s;
 }
 .menu__hidden-icon-color{
-    color: var(--secondary);
+    color: var(--third);
 }
 .menu__hidden-icon:hover{
     color: var(--primary);
@@ -113,7 +108,7 @@
         display: none;
     }
     .header__navbar-menu-color{
-        background: var(--secondary);
+        background: var(--third);
     }
     .header__social-icon{
         margin-top: 2rem;
@@ -123,5 +118,13 @@
 @media only screen and (max-width: 480px){
     .menuTooltip{
         width: 80%;
+    }
+    .header__logo{
+        width: 90px !important;
+    }
+    .header__navbar-brand .navbar-item{
+        width: 90px;
+        margin-right: calc(90% - 200px);
+        
     }
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Modal } from '../utils/Modal'
-
+import iconW from '../../assets/icono_soporte-w.png'
+import icon from '../../assets/icono_soporte.png'
 export const Support = ({ bgMenu }) => {
   const [modal, setModal] = useState(false)
   const [company, setCompany] = useState('')
@@ -12,24 +13,23 @@ export const Support = ({ bgMenu }) => {
 
   return (
     <div className="is-flex is-flex-direction-column">
-      <p
-        className={`pl-2 is-size-7 ${
-          bgMenu ? 'header__support-pw' : 'header__support-p'
-        }`}
-      >
-        Soporte
-      </p>
       <div className="">
         <div
           className="header__navbar-item button is-small header__navbar-button mx-2"
           onClick={toggleModal}
         >
+          <span className="icon is-small header__support-icon">
+            <img src={bgMenu ? icon : iconW} />
+          </span>
           Dell
         </div>
         <div
           className="header__navbar-item button is-small header__navbar-button mr-4"
           onClick={toggleModal}
         >
+          <span className="icon is-small header__support-icon">
+            <img src={bgMenu ? icon : iconW} />
+          </span>
           Cisco
         </div>
       </div>

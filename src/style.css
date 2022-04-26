@@ -1,5 +1,5 @@
 :root{
-    --primary: #0093ff;
+    --primary: #4889c8;
     --secondary: #0D0F18;
     --third: rgb(0, 0, 51); 
 }
@@ -11,9 +11,6 @@ p{
     color: #6f7073
 }
 /* Social icons  */
-.social{
-
-}
 .social__icons {
     width: 2rem;
     height: 2rem;
