@@ -5,10 +5,9 @@ import icon from '../../assets/icono_soporte.png'
 export const Support = ({ bgMenu }) => {
   const [modal, setModal] = useState(false)
   const [company, setCompany] = useState('')
-
   const toggleModal = data => {
     setModal(!modal)
-    setCompany(data.target.innerHTML)
+    setCompany(data.target.innerText)
   }
 
   return (
