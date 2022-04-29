@@ -95,7 +95,7 @@ export const FormModal = ({ toggleModal, link, tipo }) => {
                   />
                 </div>
                 <div className="form__item">
-                  <SelectField name="ciudad" label="Ciudad" />
+                  <SelectField name="ciudad" placeholder="Ciudad" />
                 </div>
                 <div className="form__textarea">
                   <TextField name="mensaje" placeholder="Mensaje" />
