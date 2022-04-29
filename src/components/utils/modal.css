@@ -1,0 +1,16 @@
+.modal__form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+}
+.modal__form .form__textarea{
+    grid-row: 1 /5;
+    grid-column: 2;
+}
+.modal__form input::placeholder, .modal__form textarea::placeholder{
+    color: var(--secondary);
+}
+.modal__form .form__button{
+    grid-column: 2;
+    text-align: end;
+}
