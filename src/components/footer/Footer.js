@@ -3,7 +3,7 @@ import './Footer.css'
 import useData from '../../hooks/useData'
 import { SocialIcons } from '../utils/SocialIcons'
 import { FooterServices } from './FooterServicios'
-import linealLogo from '../../assets/air-logo-lineal.png'
+import logoContralineas from '../../assets/air-logo-coplit.png'
 import { Menu } from '../header/Menu'
 const Footer = () => {
   const { empresa } = useData()
@@ -18,7 +18,7 @@ const Footer = () => {
       </div>
       <div className="footer__info container pb-5">
         <div className="mt-5">
-          <img src={linealLogo} alt="A.I.R" className="footer__logo" />
+          <img src={logoContralineas} alt="A.I.R" className="footer__logo" />
         </div>
         <div className="footer__info-content columns">
           <div className="footer__about column is-4">

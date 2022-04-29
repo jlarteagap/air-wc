@@ -65,3 +65,12 @@ p{
     background-color: var(--third);
     color: white;
 }
+
+/* modal style  */
+.modal__head{
+    background-color: white;
+}
+.modal__title{
+    color: var(--primary);
+    font-weight: 600;
+}

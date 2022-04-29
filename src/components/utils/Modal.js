@@ -1,6 +1,7 @@
 import React from 'react'
 import { FormContact } from './form/FormContact'
 import { FaWhatsapp } from 'react-icons/fa'
+import iconSupport from '../../assets/icono_soporte.png'
 export const Modal = ({ modal, toggleModal, company }) => {
   return (
     <>
@@ -8,8 +9,9 @@ export const Modal = ({ modal, toggleModal, company }) => {
         <div className="modal-background"></div>
         <div className="modal-card">
           <header className="modal__head modal-card-head">
-            <p className="modal__title modal-card-title">
-              Soporte para {company}
+            <p className="modal__title modal-card-title is-flex is-align-items-center">
+              <img src={iconSupport} width="32px" className="mr-3" /> Soporte
+              para {company}
             </p>
             <button className="delete" onClick={toggleModal}></button>
           </header>
