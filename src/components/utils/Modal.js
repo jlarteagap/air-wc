@@ -10,8 +10,13 @@ export const Modal = ({ modal, toggleModal, company }) => {
         <div className="modal-card">
           <header className="modal__head modal-card-head">
             <p className="modal__title modal-card-title is-flex is-align-items-center">
-              <img src={iconSupport} width="32px" className="mr-3" /> Soporte
-              para {company}
+              <img
+                src={iconSupport}
+                width="32px"
+                className="mr-3"
+                alt={`soporte para ${company}`}
+              />
+              Soporte para {company}
             </p>
             <button className="delete" onClick={toggleModal}></button>
           </header>
