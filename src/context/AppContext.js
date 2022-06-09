@@ -15,6 +15,11 @@ export function AppProvider({ children }) {
   const [clientsContext, setClientsContext] = useState(false)
   const [brandsContext, setBrandsContext] = useState(false)
   const [slideContext, setSlideContext] = useState(false)
+  const [splash, setSplash] = useState(true)
+
+  setTimeout(() => {
+    setSplash(false)
+  }, 3000)
 
   useEffect(() => {
     const url = `${API_HOST}/empresa/?a=${A}&e=${E}&ub=${UB}`
@@ -48,6 +53,7 @@ export function AppProvider({ children }) {
   }
   const value = {
     empresa,
+    splash,
     updateService,
     updateTestimonial,
     updateContact,
